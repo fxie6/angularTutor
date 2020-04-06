@@ -1,0 +1,172 @@
+#main {
+  max-width: 600px;
+  margin: 0 auto;
+  /*margin-top: 0px;*/
+  /*background: green;*/
+  /*padding: 50px;*/
+}
+
+.border1 {
+  border-style: solid;
+  border-color: green;
+  border-width: 2px;
+}
+
+.border2 {
+  border-style: solid;
+  border-color: red;
+  border-width: 2px;
+}
+
+.border3 {
+  border-style: solid;
+  border-color: yellow;
+  border-width: 2px;
+}
+
+.relative {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+
+.absolute {
+  position: absolute;
+  top: 200px;
+  right: 0px;
+  width: 300px;
+  height: 200px;
+}
+
+.container {
+  position: relative;
+  /*height: 100%;*/
+}
+
+/*nav {*/
+  /*!*position: absolute;*!*/
+  /*!*left: 0px;*!*/
+  /*!*width: 200px;*!*/
+  /*display: inline-block;*/
+  /*vertical-align: top;*/
+  /*width: 20%;*/
+/*}*/
+
+/*section {*/
+  /*margin-left: 200px;*/
+/*}*/
+
+.box2 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+  width: 79%;
+}
+
+@media screen and (min-width: 600px) {
+  /* styles for browsers larger than 600px; */
+  /*when larger than 600px, apply following*/
+  nav {
+    float: left;
+    width: 20%;
+  }
+
+  section {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  /* styles for browsers smaller than 599; */
+  /*when smaller than 599px, apply following*/
+  nav li {
+    display: inline;
+  }
+}
+
+.static {
+  position: static;
+}
+
+.relative1 {
+  position: relative;
+}
+
+.relative2 {
+  position: relative;
+  top: -10px;
+  left: 20px;
+  width: 500px;
+}
+
+.fixed {
+  position: fixed;
+  top: 200px;
+  right: 0px;
+  width: 200px;
+  background-color: yellow;
+}
+
+.background1 {
+  position: absolute;
+  background-color: limegreen;
+  width: 100%;
+  height: 100%;
+}
+
+.background2 {
+  position: absolute;
+  background-color: white;
+  top: 25%;
+  bottom: 25%;
+  left: 33%;
+  right: 33%;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+input {
+  background-color : lightgray;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+button {
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.jiuzhangBackground {
+  width: 100%;
+  height: 200px;
+  background-color: mediumpurple;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.tab {
+  margin-left: 33%;
+  margin-right: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+span {
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  width: 100px;
+  text-align: center;
+}

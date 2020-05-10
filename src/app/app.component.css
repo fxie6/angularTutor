@@ -1,0 +1,36 @@
+.Meat{
+  color: darksalmon;
+
+  margin-bottom: 10px;
+}
+
+.veg{
+  color: green;
+
+  margin-bottom: 10px;
+}
+
+.btn{
+  width:100%;
+}
+
+.control{
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+.rst{
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+  color: lightcoral;
+  font-size: large;
+}
+
+.title{
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content: center;
+  color: cornflowerblue;
+}

@@ -13,7 +13,7 @@ export class ServerComponent {
     counter = 0;
     isLogin = false;
     userName: string;
-    students: Student[] = [new Student('Bill Gates', 'Computer Science'),
+    students: Student[] = [new Student('Bill Gates2', 'Computer Science'),
                            new Student('Steve Jobs', 'Computer Science'),
                            new Student('Elon Musk', 'Computer Science')];
 

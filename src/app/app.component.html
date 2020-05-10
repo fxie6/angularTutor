@@ -1,5 +1,135 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h3> I'm in the AppComponent!</h3>
-<hr>
-<app-server></app-server>
+<!--<h3> I'm in the AppComponent!</h3>-->
+<!--<hr>-->
+<!--<app-server></app-server>-->
 <!--<div app-server> </div>-->
+<!--L2 homework-->
+<h2>Let's cook</h2>
+<hr>
+
+<h5>You can choose any two of them</h5>
+<div style="display: flex; flex-direction: column; justify-content: space-evenly">
+  <!--<label *ngFor="let recipe of recipeList"><input type="checkbox" [(ngModel)]="recipe.isChecked" (change)="fetchSelectedRecipes()">{{recipe.name}}</label>-->
+  <!--<label><input #cb1 type="checkbox" value="Eggs" (change)="onUpdateRecipe(cb1)">Eggs</label>-->
+  <!--<label><input #cb2 type="checkbox" value="Beef" (change)="onUpdateRecipe(cb2)">Beef</label>-->
+  <ul>
+    <li *ngFor="let item of recipeList">
+      <input type="checkbox" [(ngModel)]="item.isChecked" (change)="fetchSelectedRecipes()">{{item.name}}
+    </li>
+  </ul>
+</div>
+<div>
+  <h6>Selected recipe:</h6>
+  <ul>
+    <li *ngFor="let item of selectedRecipeList">{{item.name}}</li>
+  </ul>
+</div>
+<button class="btn btn-primary" style="margin-top: 10px; width: 300px" (click)="makeDish()">Start Cooking</button>
+<div *ngIf="isDish">You cooked {{ dish }}</div>
+<div *ngIf="notDish">Wrong ingredients</div>
+
+
+<!--<div class="row">-->
+  <!--<div class="col col-lg-3 title">-->
+    <!--Protein:-->
+  <!--</div>-->
+
+  <!--&lt;!&ndash;<div class="col col-lg-3 Meat">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button type="button" class="btn btn-info" (click)="pickMeat(meats[0])">{{ meats[0] }}</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--&lt;!&ndash;<div class="col col-lg-3 Meat">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button type="button" class="btn btn-info" (click)="pickMeat(meats[1])">{{ meats[1] }}</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--&lt;!&ndash;<div class="col col-lg-3 Meat">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button type="button" class="btn btn-info" (click)="pickMeat(meats[2])">{{ meats[2] }}</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--<div class="col col-lg-3 Meat" *ngFor="let meat of meats">-->
+    <!--<button type="button" class="btn btn-info" (click)="pickMeat(meat)">{{ meat }}</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="row">-->
+  <!--<div class="col col-lg-3 title">-->
+    <!--Veggie:-->
+  <!--</div>-->
+
+  <!--&lt;!&ndash;<div class="col col-lg-3 veg">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button type="button" class="btn btn-success" (click)="pickVeggie(veggies[0])">{{veggies[0]}}</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--&lt;!&ndash;<div class="col col-lg-3 veg">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button type="button" class="btn btn-success" (click)="pickVeggie(veggies[1])">{{veggies[1]}}</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--&lt;!&ndash;<div class="col col-lg-3 veg">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button type="button" class="btn btn-success" (click)="pickVeggie(veggies[2])">{{veggies[2]}}</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--<div class="col col-lg-3 veg" *ngFor="let veggie of veggies">-->
+    <!--<button type="button" class="btn btn-success" (click)="pickVeggie(veggie)">{{ veggie }}</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="row">-->
+  <!--<div class="col col-lg-3 title">-->
+    <!--Your Choice:-->
+  <!--</div>-->
+  <!--<div *ngIf="meat_status" class="col col-lg-3 Meat">-->
+    <!--<button type="button" class="btn btn-info">{{meat_choice}}</button>-->
+  <!--</div>-->
+  <!--<div *ngIf="veggie_status" class="col col-lg-3 veg">-->
+    <!--<button type="button" class="btn btn-success">{{veggie_choice}}</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div class="row control">-->
+  <!--<div class="col col-md-3">-->
+    <!--<button type="button" class="btn btn-secondary" (click)="checkOrder()">Order</button>-->
+  <!--</div>-->
+  <!--<div class="col col-md-3 ">-->
+    <!--<button type="button" class="btn btn-danger" (click)="restart()">Restart</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div *ngIf="success" class="rst">-->
+  <!--You order {{dish_name}} !-->
+<!--</div>-->
+
+<!--<div *ngIf="fail" class="rst">-->
+  <!--Wrong ingredients !-->
+<!--</div>-->
+
+<!--<h1>Checklist</h1>-->
+<!--<div class="row">-->
+
+  <!--<div class="col-md-4">-->
+    <!--<h4>List of Hobbies</h4>-->
+
+    <!--<ul class="checkbox-items">-->
+      <!--<li *ngFor="let item of checkboxesDataList">-->
+        <!--<input type="checkbox" name="" id="" [(ngModel)]="item.isChecked" (change)="fetchSelectedItems()">{{item.label}}-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+
+  <!--<div class="col-md-4">-->
+    <!--<h4>No of Selected Hobbies: {{selectedItemsList.length}} </h4>-->
+    <!--<ul>-->
+      <!--<li *ngFor="let item of selectedItemsList">{{item.label}}</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+
+  <!--<div class="col-md-4">-->
+    <!--<h4>Object</h4>-->
+    <!--<code>-->
+      <!--{{selectedItemsList | json}}-->
+    <!--</code>-->
+
+    <!--<h4>Array of IDs</h4>-->
+    <!--<code>{{checkedIDs}}</code>-->
+  <!--</div>-->
+
+<!--</div>-->
